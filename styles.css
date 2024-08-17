@@ -1,3 +1,27 @@
+html {
+    font-size: 16px;
+}
+
 body {
     background-color: red;
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+}
+
+.navbar {
+    height: 75px;
+    display: flex;
+    background-color: white;
+}
+
+.navbar__section {
+    display: flex;
+}
+
+.navbar__links {
+    display: flex;
 }
