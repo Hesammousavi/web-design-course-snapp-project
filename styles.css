@@ -1,27 +1,78 @@
+@import url('./iransans-fonts.css');
+
 html {
-    font-size: 16px;
+    font-size: 15px;
+    font-family: IRANSansX;
 }
 
-body {
-    background-color: red;
-}
-
+/* Base container styling */
 .container {
-    max-width: 1440px;
     width: 100%;
-    margin: auto;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 576px and up) */
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* Extra extra large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1440px; /* Increased width for larger screens */
+    }
+}
 .navbar {
-    height: 75px;
+    height: 5.5rem;
     display: flex;
     background-color: white;
+    border-bottom: 1px solid rgba(0,0,0,.2);
 }
 
 .navbar__section {
     display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 .navbar__links {
     display: flex;
+}
+
+.navbar__links li {
+    margin-right: 2.2rem;
+    font-weight: 200;
 }
