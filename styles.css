@@ -76,3 +76,28 @@ html {
     margin-right: 2.2rem;
     font-weight: 200;
 }
+
+
+
+/*
+* Hero Section
+*/
+
+.hero-section {
+    display: flex;
+}
+
+.hero-section__intro {
+    background-color: #21aa58;
+    color: white;
+    width: 50%;
+}
+
+.hero-section__pic {
+    background-image: url(/statics/img/intro_desktop.jpg);
+    min-height: 40vh;
+    width: 50%;
+    background-position: center center;
+    background-size: cover;
+    transform: scaleX(-1);
+}
