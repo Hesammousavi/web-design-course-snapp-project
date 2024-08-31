@@ -1,8 +1,12 @@
 @import url('./iransans-fonts.css');
 
 html {
-    font-size: 15px;
+    font-size: 100%;
     font-family: IRANSansX;
+}
+
+button {
+    font-family: inherit !important;
 }
 
 /* Base container styling */
@@ -10,8 +14,8 @@ html {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 12%;
+    padding-left: 12%;
 }
 
 /* Extra small devices (phones, less than 576px) */
@@ -55,6 +59,14 @@ html {
         max-width: 1440px; /* Increased width for larger screens */
     }
 }
+
+/* Extra extra large devices (larger desktops, 1400px and up) */
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1640px; /* Increased width for larger screens */
+    }
+}
+
 .navbar {
     height: 5.5rem;
     display: flex;
@@ -91,6 +103,71 @@ html {
     background-color: #21aa58;
     color: white;
     width: 50%;
+    padding: 2rem;
+    padding-right: 15%;
+}
+
+.hero-section__intro_tagline {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 3.25rem;
+    margin-bottom: 1rem;
+}
+
+.hero-section__intro_description {
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+
+.hero-section__intro_sendlink {
+    display: flex;
+    align-items: center;
+    height: 3.5rem ;
+    margin-bottom: 1rem;
+}
+
+.hero-section__intro_sendlink > button {
+    border: none;
+    border-radius: 0.375rem;
+    color : #21aa58;
+    font-family: inherit !important;
+    padding: 0 1rem;
+    flex: 0 0 24%;
+    height: 2.5rem;
+    margin-right: 1rem;
+}
+
+.hero-section__intro_sendlink_input {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid white;
+    flex : 0 0 50%;
+}
+
+.hero-section__intro_sendlink_input input {
+    outline: none;
+    background-color: transparent;
+    border: none;
+    color: white;
+    line-height: 3rem;
+    padding: 0 .5rem;
+    height: 2.5rem;
+    width: 100%;
+}
+
+.hero-section__intro_sendlink_input input::placeholder {
+    color: white;
+}
+
+.hero-section__intro_sendlink_input .input__dot {
+    width: .5rem;
+    height: .5rem;
+    border-radius: 99999999px;
+    background-color: white;
+    margin-left: .5rem;
 }
 
 .hero-section__pic {
@@ -100,4 +177,22 @@ html {
     background-position: center center;
     background-size: cover;
     transform: scaleX(-1);
+    flex: 0 0 50%;
+
+}
+
+
+.hero-section__intro_gotowebapp {
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    font-size : 1.125rem;
+    cursor: pointer;
+    border-radius: .325rem;
+    height: 3rem;
+    padding: 0 1.5rem;
+}
+
+.hero-section__intro_gotowebapp:hover {
+    background-color: rgba(255,255,255, .1);
 }
