@@ -5,6 +5,10 @@ html {
     font-family: IRANSansX;
 }
 
+p {
+    line-height: 1.7;
+}
+
 button {
     font-family: inherit !important;
 }
@@ -220,6 +224,7 @@ button {
 .intro-of-snapp-apps {
     background-color: #f2f5f8;
     color: #333;
+    padding-bottom: 3rem;
 }
 
 .intro-of-snapp-apps_items {
@@ -264,4 +269,57 @@ button {
 .intro-of-snapp-apps_item_info p {
     font-size: 0.875rem;
     color: rgba(0,0,0,.6);
+}
+
+
+.snapp-for-all-need {
+    display: flex;
+}
+
+
+.snapp-for-all-need__pic {
+    background-image: url(/statics/img/super-app.jpg);
+    min-height: 50vh;
+    width: 50%;
+    background-position: center center;
+    background-size: cover;
+    flex: 0 0 50%;
+}
+
+
+
+.snapp-for-all-need__intro {
+    width: 50%;
+    padding: 2rem;
+    padding-left: 15%;
+    color : #333;
+}
+
+
+.snapp-for-all-need__intro h2 {
+    font-size: 1.375rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.snapp-for-all-need__intro p {
+    font-weight: 300;
+}
+
+
+
+
+.snapp-benefits__items {
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 4rem;
+    padding: 0 18rem;
+}
+
+.snapp-benefits__item_cover {
+    background-color: #f2f5f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.125rem;
 }
