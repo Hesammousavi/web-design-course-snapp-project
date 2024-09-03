@@ -7,12 +7,15 @@
     --text-lg : 1.25rem;
     --text-xl : 1.375rem;
     --text-2xl : 2.25rem;
+    --background-primary : #f2f5f8;
 }
 
 
 html {
     font-size: 100%;
     font-family: IRANSansX;
+    color: #333;
+    line-height: 1.7;
 }
 
 p {
@@ -31,6 +34,22 @@ button {
     /* padding-right: 12%;
     padding-left: 12%; */
 }
+
+/* Shared Styles */
+.button {
+    border: none;
+    padding:1rem 2rem;
+    outline: none;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.button-green {
+    background-color: rgb(0, 209, 112);
+    color: white;
+}
+
 
 /* Extra small devices (phones, less than 576px) */
 @media (max-width: 575.98px) {
@@ -74,12 +93,6 @@ button {
     }
 }
 
-/* Extra extra large devices (larger desktops, 1400px and up) */
-@media (min-width: 1600px) {
-    .container {
-        max-width: 1640px; /* Increased width for larger screens */
-    }
-}
 
 .navbar {
     height: 5.5rem;
@@ -293,7 +306,7 @@ button {
 */
 
 .intro-of-snapp-apps {
-    background-color: #f2f5f8;
+    background-color: var(--background-primary);
     color: #333;
     padding-bottom: 3rem;
 }
@@ -396,7 +409,7 @@ button {
 }
 
 .snapp-benefits__item_cover {
-    background-color: #f2f5f8;
+    background-color: var(--background-primary);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -411,4 +424,74 @@ button {
 .snapp-benefits__item_description {
     font-size: var(--text-xs);
     font-weight: 300;
+}
+
+
+
+/**
+* Driver Registration
+*/
+
+
+.driver-registration {
+    background-color: var(--background-primary);
+    padding:4rem;
+}
+
+.driver-registration__title {
+    font-size: var(--text-2xl);
+    font-weight: bold;
+    text-align: center;
+}
+
+.driver-registration__description {
+    padding: 1rem 0;
+    text-align: center;
+    display: block;
+    font-size: var(--text-lg) ;
+    font-weight: 300;
+}
+
+
+
+.driver-registration__btn {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.driver-registration__video {
+    border-radius: .5rem;
+    overflow: hidden;
+    margin: 2.5rem;
+}
+
+.driver-registration__video video {
+    width: 100%;
+    height: 100%;
+
+}
+
+.driver-registration__benefits {
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    gap: 2rem;
+    margin: 2.5rem;
+}
+
+.driver-registration__benefits_item {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.driver-registration__benefits_item .benefits_item_info h4 {
+    font-weight: bold;
+    padding: 1rem 0;
+}
+
+.driver-registration__benefits_item .benefits_item_info p {
+    font-size: var(--text-sm);
 }
