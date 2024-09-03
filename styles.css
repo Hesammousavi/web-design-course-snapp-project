@@ -22,6 +22,11 @@ p {
     line-height: 1.7;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 button {
     font-family: inherit !important;
 }
@@ -494,4 +499,41 @@ button {
 
 .driver-registration__benefits_item .benefits_item_info p {
     font-size: var(--text-sm);
+}
+
+
+/**
+* Footer
+*/
+
+.footer {
+    padding: 3rem 0;
+}
+
+
+.footer__links {
+    display: flex;
+    justify-content: center;
+}
+
+
+.footer__links li {
+    margin-left: 1rem;
+}
+
+.footer__socials {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.footer__socials a {
+    margin-left: 0.5rem;
+}
+
+
+.footer__etemad {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
 }
