@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snapp</title>
+    <link
+        rel="stylesheet"
+        href="statics/css/keen-slider.min.css"
+    />
     <link rel="stylesheet" href="/reset.css">
     <link rel="stylesheet" href="/styles.css">
 </head>
@@ -96,12 +100,16 @@
                 <button type="submit">ارسال لینک</button>
             </form>
             <a href="#">
-                <button class="hero-section__intro_gotowebapp">ورود به وب اپلیکیشن اسنپ</button>
+            <button class="hero-section__intro_gotowebapp">ورود به وب اپلیکیشن اسنپ</button>
+            </a>
+
+            <a href="#">
+                <button class="hero-section__downloadapp">دانلود اپلیکیشن اسنپ</button>
             </a>
         </div>
         <div class="hero-section__pic"></div>
     </div>
-    <div>
+    <div class="snapp-apps-links-section">
         <div class="container">
             <div class="snapp-apps-links">
                 <a href="https://redirect.appmetrica.yandex.com/serve/100056237185439217">
@@ -354,6 +362,45 @@
                 </a>
 
             </div>
+        </div>
+    </div>
+
+    <div class="snapp-slider-section">
+
+        <div class="container">
+            <div class="snapp-slider-wrapper">
+                <div id="snapp_slider" class="keen-slider">
+                    <div class="keen-slider__slide">
+                        <a href="#">
+                            <img src="/statics/img/Market.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="keen-slider__slide">
+                        <a href="#">
+                            <img src="/statics/img/Food.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="keen-slider__slide">
+                        <a href="#">
+                            <img src="/statics/img/Driver.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="keen-slider__slide">
+                        <a href="#">
+                            <img src="/statics/img/Club.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="keen-dots-wrapper">
+                    <div class="keen-dots">
+                        <button type="button" id="fortest" class="dot active"></button>
+                        <button type="button" class="dot"></button>
+                        <button type="button" class="dot"></button>
+                        <button type="button" class="dot"></button>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -631,6 +678,42 @@
         </div>
     </div>
 
+    <script src="statics/js/keen-slider.js"></script>
+    <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            // Initialize Keen Slider
+            var slider = new KeenSlider("#snapp_slider", {
+                loop: true,
+                created: function (instance) {
+                    // Add event listeners to the dots
+                    var dots = document.querySelectorAll(".keen-dots .dot");
+                    dots.forEach(function (dot, idx) {
+                        dot.addEventListener("click", function () {
+                            instance.moveToIdx(idx); // Correct method to move to the slide corresponding to the dot index
+                        });
+                    });
+
+                    // Update the active dot on slider creation
+                    updateActiveDot(instance);
+                },
+                slideChanged: function (instance) {
+                    // Update the active dot when the slide changes
+                    updateActiveDot(instance);
+                }
+            });
+
+            // Function to update the active dot
+            function updateActiveDot(instance) {
+                var dots = document.querySelectorAll(".keen-dots .dot");
+                dots.forEach(function (dot, idx) {
+                    dot.classList.remove("active");
+                    if (idx === instance.track.details.rel) {
+                        dot.classList.add("active");
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
